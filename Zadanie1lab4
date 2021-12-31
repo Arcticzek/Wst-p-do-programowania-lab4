@@ -1,0 +1,55 @@
+#include <iostream>
+#include "Zad1.h"
+
+using namespace std;
+
+int main()
+{
+    int wybor;
+    float r, result, a, b, h;
+
+    cout << "Wybierz figura do obliczenia pola i objetosci :\n";
+    cout << "1. Kolo\n2. Prostokat\n3. Trojkat\n4. Szescian\n5. Walec\n";
+    cin >> wybor;
+    switch (wybor) {
+    case 1:
+        cout << "Podaj promień okręgu: ";
+        cin >> r;
+        if (r < 0) break;
+        cout << "Pole: " << koloA(r) << "\nWartosc: " << koloV(r);
+        break;
+    case 2:
+        cout << "Podaj bok a i b prostokata:";
+        cin >> a;
+        cin >> b;
+        if (a < 0 || b < 0) break;
+        cout << "Pole: " << prostokatA(a, b);
+        break;
+    case 3:
+        cout << "Podaj bok a i b trojkata:";
+        cin >> a;
+        cin >> h;
+        if (a < 0 || h < 0) break;
+        cout << "Pole: " << trojkatA(a, h);
+        break;
+    case 4:
+        cout << "Podaj bok szescianu: ";
+        cin >> a;
+        if (a < 0) break;
+        cout << "Pole: " << szescianA(a) << "\nWartosc: " << szescianV(a);
+        break;
+    case 5:
+        cout << "Podaj wysokość i promień walca:";
+        cin >> r;
+        cin >> h;
+        if (r < 0 || h < 0) break;
+        cout << "Volume: " << cylinderV(h, r);
+        break;
+    default:
+        cout << "Zly wybor wybierz ponownie:\n";
+        cin >> wybor;
+        break;
+    }
+
+    return 0;
+}
