@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Zad1.h"
+#include "Zadanie1.h"
 
 using namespace std;
 
