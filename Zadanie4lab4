@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+long long licz(unsigned int n)
+{
+	long long a = 1;
+
+	for (; n > 1; n -= 2)
+		a *= n;
+
+	return a;
+}
+
+int main()
+{
+	unsigned int n;
+
+	cout << "Wprowadz liczbe: ";
+	cin >> n;
+	cout << "Podwojna silnia z liczby " << n << " is " << licz(n) << endl;
+
+	return 0;
+}
